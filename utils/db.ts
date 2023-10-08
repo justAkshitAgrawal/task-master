@@ -10,9 +10,11 @@ if (!MONGO_URI) {
   );
 }
 
+// @ts-ignore
 let cached = global.mongoose;
 
 if (!cached) {
+  // @ts-ignore
   cached = global.mongoose = { conn: null, promise: null };
 }
 
